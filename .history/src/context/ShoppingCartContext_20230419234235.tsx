@@ -76,8 +76,6 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
             removeFromCart,
             cartQuantity,
             cartItems,
-            openCart,
-            closeCart,
         }}>
             {children}
         </ShoppingCartContext.Provider>

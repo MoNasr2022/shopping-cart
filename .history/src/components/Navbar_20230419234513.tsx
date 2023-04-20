@@ -53,7 +53,7 @@ export default function Navbar() {
               alignItems: "center",
             }}
           >
-            {cartQuantity}
+            3
           </span>
         </Button>
       </Container>

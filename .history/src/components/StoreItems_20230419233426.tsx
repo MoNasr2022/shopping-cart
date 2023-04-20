@@ -50,7 +50,7 @@ function StoreItems({ id, name, price, imgUrl }: StoreItemsProps) {
                 </div>
                 <Button onClick={() => addItem(id)}>+</Button>
               </div>
-              <Button variant="danger" size="sm" onClick={() => removeFromCart(id)}>
+              <Button variant="danger" size="sm" onClick={() => addItem(id)}>
                 Remove
               </Button>
             </div>

@@ -44,13 +44,13 @@ function StoreItems({ id, name, price, imgUrl }: StoreItemsProps) {
                 className="d-flex justify-content-center align-items-center"
                 style={{ gap: ".5rem" }}
               >
-                <Button onClick={() => removeItem(id)}>-</Button>
+                <Button onClick={() => reItem(id)}>-</Button>
                 <div>
                   <span className="fs-3">{quantity}</span> in cart
                 </div>
                 <Button onClick={() => addItem(id)}>+</Button>
               </div>
-              <Button variant="danger" size="sm" onClick={() => removeFromCart(id)}>
+              <Button variant="danger" size="sm">
                 Remove
               </Button>
             </div>

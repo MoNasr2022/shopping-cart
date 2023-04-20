@@ -12,7 +12,7 @@ type StoreItemsProps = {
 function StoreItems({ id, name, price, imgUrl }: StoreItemsProps) {
 
   const { getItemQuantity, addItem, removeItem, removeFromCart } = useShoppingCart()
-  const quantity = getItemQuantity(id);
+  const quantity = ;
 
   return (
     <Card className="h-100">
@@ -29,12 +29,7 @@ function StoreItems({ id, name, price, imgUrl }: StoreItemsProps) {
         </Card.Title>
         <div className="mt-auto">
           {quantity === 0 ? (
-            <Button
-              className="btn btn-primary w-100"
-              onClick={() => addItem(id)}
-            >
-              + Add to Cart
-            </Button>
+            <Button className="btn btn-primary w-100">+ Add to Cart</Button>
           ) : (
             <div
               className="d-flex flex-column align-items-center"
@@ -44,15 +39,13 @@ function StoreItems({ id, name, price, imgUrl }: StoreItemsProps) {
                 className="d-flex justify-content-center align-items-center"
                 style={{ gap: ".5rem" }}
               >
-                <Button onClick={() => removeItem(id)}>-</Button>
+                <Button>-</Button>
                 <div>
                   <span className="fs-3">{quantity}</span> in cart
                 </div>
-                <Button onClick={() => addItem(id)}>+</Button>
+                <Button>+</Button>
               </div>
-              <Button variant="danger" size="sm" onClick={() => removeFromCart(id)}>
-                Remove
-              </Button>
+              <Button variant="danger" size="sm">Remove</Button>
             </div>
           )}
         </div>
